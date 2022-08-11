@@ -1,0 +1,20 @@
+####################################################
+Running Kubernetes Objects using Imperative Commands
+####################################################
+
+1. Create a pod using the tetris game image
+----------------------------------------
+
+kubectl run tetris --image uzyexe/tetris
+kubectl run nginx --image nginx
+kubectl run apache --image httpd
+
+
+2. Exposing the pod through a LoadBalancer Service
+----------------------------------------
+
+kubectl expose pod tetris --type=LoadBalancer --port 80
+kubectl expose pod nginx --type=LoadBalancer --port 80
+kubectl expose pod apache --type=LoadBalancer --port 80
+
+
