@@ -1,0 +1,11 @@
+###################
+Scaling Deployments
+###################
+
+1. Scaling a deployment manually via kubectl
+
+kubectl scale deployment azure-vote-front --replicas=4
+
+2. Autoscaling a deployment using a horizontal pod autoscaler 
+
+kubectl autoscale deployment azure-vote-front --cpu-percent=40 --min=1 --max=4
