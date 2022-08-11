@@ -1,8 +1,14 @@
 ####################################################
 Running Kubernetes Objects using Imperative Commands
 ####################################################
+setting kubectl alias
+---------------------
+powershell: Set-Alias -Name k -Value kubectl
+alias k=kubectl
+####################################################
 
-1. Create a pod using the tetris game image
+
+1. Create pods using various images
 ----------------------------------------
 
 kubectl run tetris --image uzyexe/tetris
@@ -10,7 +16,7 @@ kubectl run nginx --image nginx
 kubectl run apache --image httpd
 
 
-2. Exposing the pod through a LoadBalancer Service
+2. Exposing pod through a LoadBalancer Service
 ----------------------------------------
 
 kubectl expose pod tetris --type=LoadBalancer --port 80
